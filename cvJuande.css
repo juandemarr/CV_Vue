@@ -1,0 +1,17 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+}
+/*Valores generales*/
+:root{
+    --main-font:Verdana;
+    --alternative-font:sans-serif;
+    --font-size:1.1rem;
+    --main-color:rgb(62,178,255);
+    --main-modal-color:rgba(62, 178, 255, 0.5);
+    --muted-color:rgba(62, 178, 255, 0.15);
+    --second-color:#050047;
+    --line-height:1.6;
+    --text-color:#333;
+    --bg-color:white;
+}
