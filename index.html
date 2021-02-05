@@ -14,7 +14,8 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
-<body data-spy="scroll" data-target="#scrollSpy" data-offset="0">
+<body data-spy="scroll" data-target="#scrollSpy">
+    <section id="main" >
     <nav id="scrollSpy" class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between align-items-center">
         <div class="navbar-brand">
           <img src="img/toriis.jpeg" alt="Juan de Dios Cáceres" id="retrato" class="d-inline-block align-top">
@@ -28,93 +29,195 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul class="nav navbar-nav nav-pills">
             <li class="nav-item">
-                <a class="nav-link" href="#datosPersonales">Datos personales</a>
+                <a class="nav-link" href="#datosPersonales">{{language[1].encabezados.tituloSeccion1}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#estudios1">Formación académica</a>
+                <a class="nav-link" href="#estudios1">{{language[1].encabezados.tituloSeccion2}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#estudios2">Formación complementaria</a>
+                <a class="nav-link" href="#estudios2">{{language[1].encabezados.tituloSeccion3}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#experiencia">Experiencia</a>
+                <a class="nav-link" href="#experiencia">{{language[1].encabezados.tituloSeccion4}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#habilidades">Habilidades</a>
+                <a class="nav-link" href="#habilidades">{{language[1].encabezados.tituloSeccion5}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#idiomas">Idiomas</a>
+                <a class="nav-link" href="#proyectos">{{language[1].encabezados.tituloSeccion6}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#idiomas">{{language[1].encabezados.tituloSeccion7}}</a>
             </li>
           </ul>
         </div>
       
       </nav>
 
+    <section id="main2" class="container-fluid flex-column">
+        <div class="container-fluid d-flex align-items-center justify-content-end banderas">
+            <img src="img/espana.png" alt="Español" class="mr-3" v-on:click="espanita">
+            <img src="img/uk.svg" alt="Inglés" v-on:click="ingles">
+        </div>
 
-
-    <section id="main" v-if="messageAJAX" class="container-fluid">
-        <section id="datosPersonales">
-            <h2 class="my-2">{{espanol[1].encabezados.tituloSeccion1}}</h2>
+        <section id="datosPersonales" class="mb-2 my-5">
+            <h2 class="my-4">{{language[1].encabezados.tituloSeccion1}}</h2>
             <div class="row descripcion no-gutters container py-2">
                 <div class="col">
-                    {{espanol[0].datosPersonales.descripcion}}
+                    {{language[0].datosPersonales.descripcion}}
                 </div>
             </div>
             <div class="row datos no-gutters container mt-2">
                 <div class="col-12 col-md-4">
-                    {{espanol[0].datosPersonales.tituloFechaNac}}
-                    {{espanol[0].datosPersonales.contenidoFechaNac}}
+                    {{language[0].datosPersonales.tituloFechaNac}}
+                    {{language[0].datosPersonales.contenidoFechaNac}}
                 </div>
                 <div class="col-12 col-md-4">
-                    {{espanol[0].datosPersonales.email}}
-                    {{espanol[0].datosPersonales.contenidoEmail}}
+                    {{language[0].datosPersonales.email}}
+                    {{language[0].datosPersonales.contenidoEmail}}
                 </div>
                 <div class="col-12 col-md-4">
-                    {{espanol[0].datosPersonales.telefono}}
-                    {{espanol[0].datosPersonales.numeroTelefono}}
+                    {{language[0].datosPersonales.telefono}}
+                    {{language[0].datosPersonales.numeroTelefono}}
                 </div>
             </div>
             <div class="row iconos no-gutters container mt-4">
-                <div class="col-4 offset-4">
-                    <a v-bind:href="enlaceGithub" target="_blank" data-toggle="tooltip" data-placement="top" title="juandemarr"><img src="img/github-brands.svg" alt="GitHub icon"></a>
-                    <a v-bind:href="enlaceGithub" target="_blank" data-toggle="tooltip" data-placement="top" title="juandemarr"><img src="img/github-brands.svg" alt="GitHub icon"></a>
-                    <a v-bind:href="enlaceGithub" target="_blank" data-toggle="tooltip" data-placement="top" title="juandemarr"><img src="img/github-brands.svg" alt="GitHub icon"></a>
-                    <a v-bind:href="enlaceGithub" target="_blank" data-toggle="tooltip" data-placement="top" title="juandemarr"><img src="img/github-brands.svg" alt="GitHub icon"></a>
+                <div class="col d-flex justify-content-center">
+                    <a v-bind:href="language[0].datosPersonales.enlaceGithub" target="_blank" data-toggle="tooltip" data-placement="top" title="juandemarr"><img src="img/github-brands.svg" alt="GitHub icon"></a>
+                    <a v-bind:href="language[0].datosPersonales.enlaceLinkedin" target="_blank" data-toggle="tooltip" data-placement="top" title="Juan de Dios Cáceres"><img src="img/linkedin-in-brands.svg" alt="Linkedin icon"></a>
+                </div>
+            </div>
+        </section>
+ 
+        <section id="estudios1" class="my-5">
+            <h2 class="my-4">{{language[1].encabezados.tituloSeccion2}}</h2>
+            <table class="table table-hover">
+                <tr v-for="(titulo,index) in titulos"
+                    v-bind:key="titulo+index">
+                    <td><b><img src="img/square-full-solid.svg" id="vinetaLista" alt="viñeta">{{titulo.nombre}}</b><br>{{language[1].encabezados.tituloLugar}}{{titulo.lugar}}<br>{{language[1].encabezados.tituloFecha}}{{titulo.fecha}}</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="estudios2" class="my-5">
+            <h2 class="my-4">{{language[1].encabezados.tituloSeccion3}}</h2>
+            <table class="table table-hover">
+                <tr v-for="(titulo,index) in titulosComp"
+                    v-bind:key="titulo+index">
+                    <td><b><img src="img/square-full-solid.svg" id="vinetaLista" alt="viñeta">{{titulo.nombre}}</b><br>{{language[1].encabezados.tituloLugar}}{{titulo.lugar}}<br>{{language[1].encabezados.tituloFecha}}{{titulo.fecha}}</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="experiencia" class="my-5">
+            <h2 class="my-4">{{language[1].encabezados.tituloSeccion4}}</h2>
+            <div class="card mb-3" 
+                 v-for="(puesto,index) in experiencia"
+                 v-bind:key="puesto+index">
+                <h6 class="card-title font-weight-bold">{{puesto.nombre}}</h6>
+                <div class="card-body">
+                    {{language[1].encabezados.tituloLugar}}{{puesto.lugar}}
+                    <br>{{language[1].encabezados.tituloFecha}}{{puesto.fecha}}
                 </div>
             </div>
         </section>
 
-        <section id="estudios1">
-
+        <section id="habilidades" class="my-5">
+            <h2 class="my-5">{{language[1].encabezados.tituloSeccion5}}</h2>
+            <div class="container-lg container-fluid-md">
+                <div class="row d-flex justify-content-between align-items-center no-gutters mb-3" 
+                     v-for="(habilidad,index) in habilidades"
+                     v-bind:key="habilidad+index">
+                    <div class="col-12 col-md-2">{{habilidad.nombre}}</div>
+                    <div class="col-12 col-md-10 progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" v-bind:style="{width: habilidad.valor}" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="estudios2">
+        <section id="proyectos" class="my-5">
+            <h2 class="my-4">{{language[1].encabezados.tituloSeccion6}}</h2>
+            <div class="container-lg container-fluid-md">
+            <div class="media mb-3"
+                 v-for="(proyecto,index) in proyectos"
+                 v-bind:key="proyecto+index">
+                <img v-bind:src="proyecto.imgsrc" class="mr-3" v-bind:alt="proyecto.nombre">
+                <div class="media-body">
+                  <h5 class="m-0">{{proyecto.nombre}}</h5>
+                  <button type="button" class="btn botonPrimary ml-3" data-toggle="modal" v-bind:data-target="proyecto.href">
+                    {{language[0].datosPersonales.boton}}
+                  </button>
 
+                  <div class="modal fade" v-bind:id="proyecto.id" tabindex="-1" v-bind:aria-labelledby="proyecto.id" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="index">{{proyecto.nombre}}</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="w-100 mb-3">
+                                <img v-bind:src="proyecto.img1" class="mr-3 imagenModal" v-bind:alt="proyecto.nombre">
+                                <img v-bind:src="proyecto.img2" class="mr-3 imagenModal" v-bind:alt="proyecto.nombre">
+                            </div>
+                            <p>{{proyecto.descripcion}}<br>
+                            {{proyecto.tecnologias}}<br>
+                            <a v-bind:href="proyecto.urlrepo" target="_blank">{{proyecto.urlrepo}}</a><br>
+                            <a v-bind:href="proyecto.urlweb" target="_blank">{{proyecto.urlweb}}</a>
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+            </div>
         </section>
 
-        <section id="experiencia">
-
+        <section id="idiomas" class="my-5">
+            <h2 class="my-4">{{language[1].encabezados.tituloSeccion7}}</h2>
+            <div class="container d-flex justify-content-start">
+                <section>
+                <div class="card mr-2">
+                    <div class="card-body">
+                    <a href="#cuerpo" data-toggle="collapse"><h6 class="card-title font-weight-bold">{{language[6].idiomaNativo.nombre}}</h6></a>
+                    <div class="collapse" id="cuerpo">
+                        <p class="card-text">
+                            {{language[6].idiomaNativo.valor}}
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                </section>
+                <section>
+                <div class="card mr-2"
+                    v-for="(idioma,index) in idiomas"
+                    v-bind:key="idioma+index">
+                    <div class="card-body">
+                    <a href="#cuerpo2" data-toggle="collapse"><h6 class="card-title font-weight-bold">{{idioma.nombre}}</h6></a>
+                    
+                    <div class="collapse" id="cuerpo2">
+                    <p class="card-text">
+                        {{language[1].encabezados.expresionOral}}{{idioma.expresionOral}}<br>
+                        {{language[1].encabezados.comprensionOral}}{{idioma.comprensionOral}}<br>
+                        {{language[1].encabezados.expresionEscrita}}{{idioma.expresionEscrita}}<br>
+                        {{language[1].encabezados.comprensionEscrita}}{{idioma.comprensionEscrita}}
+                    </p>
+                    </div>
+                    </div>
+                </div>
+                </section>
+            </div>
         </section>
-
-        <section id="habilidades">
-
-        </section>
-
-        <section id="proyectos">
-
-        </section>
-
-        <section id="idiomas">
-
-        </section>
-
     </section>
-    <!-- <section id="main" v-else="messageAJAX">
-        <div class="d-flex align-items-center flex-column">
-            <strong>Loading...</strong>
-            <div class="spinner-border mt-4" role="status" aria-hidden="true"></div>
-          </div>
-    </section> -->
+    </section>
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
