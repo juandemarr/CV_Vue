@@ -1,8 +1,86 @@
 {
     "espanol":[
-        
+        {
+            "datosPersonales":{
+                "tituloFechaNac":"Fecha de nacimiento: ",
+                "contenidoFechaNac":"24/08/1996",
+                "email":"E-mail: ",
+                "contenidoEmail":"acjuande20@gmail.com",
+                "telefono":"Teléfono: ",
+                "numeroTelefono":"666666666",
+                "descripcion":"\"Debido a mi vocación por la informática he adquirido amplios conocimientos en el desarrollo de aplicaciones web y en el área técnica, desarrollando mi trabajo con gran espíritu de responsabilidad, organización y calidez humana.\"",
+                "enlaceGithub":"https://github.com/juandemarr",
+                "enlaceLinkedin":"there"
+            }
+        },
+        {
+            "encabezados":{
+                "tituloSeccion1":"Datos Personales",
+                "tituloSeccion2":"Formacion Académica",
+                "tituloSeccion3":"Formacion Complementaria",
+                "tituloSeccion4":"Experiencia Profesional",
+                "tituloSeccion5":"Habilidades",
+                "tituloSeccion6":"Proyectos",
+                "tituloSeccion7":"Idiomas",
+                "tituloSeccion8":"Contacto",
+                "tituloFecha":"Período: ",
+                "tituloLugar":"Lugar: ",
+                "comprensionOral":"Comprensión oral: ",
+                "expresionOral":"Expresión Oral",
+                "comprensionEscrita":"Comprensión escrita",
+                "expresionEscrita":"Expresión escrita"
+            }
+        },
+        {
+            "formacionAcademica":[
+                {
+                    "nombre":"Grado superior en Desarrollo de aplicaciones web",
+                    "lugar":"I.E.S. Francisco Ayala, Granada",
+                    "fecha":"09-2019 / 06-2021"
+                },
+                {
+                    "nombre":"Grado superior en Administración de sistemas informáticos en red",
+                    "lugar":"I.E.S. Zaidín Vergeles, Granada",
+                    "fecha":"09-2015 / 06-2017"
+                }
+            ]
+        },
+        {
+            "formacionComplementaria":[
+                {
+                    "nombre":"Curso: Desarrollo y administración en Cloud",
+                    "lugar":"Centro de estudios integrales, Granada",
+                    "fecha":"03-2019 / 07-2019"
+                }
+            ]
+        },
+        {
+            "experiencia":[
+                {
+                    "nombre":"Diseñador web (Prácticas)",
+                    "lugar":"Terceto Comunicación, Granada",
+                    "fecha":"07-2019 / 07-2019"
+                },
+                {
+                    "nombre":"Técnico informático (Prácticas)",
+                    "lugar":"Microdigital, Granada",
+                    "fecha":"03-2017 / 06-2017"
+                }
+            ]
+        },
+        {
+            "idiomas":[
+                {
+                    "nombre":"Inglés"
+
+                }
+            ]
+        },
+        {
+
+        }
     ],
-    "inglés":[
+    "ingles":[
 
     ]
 }
