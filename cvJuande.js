@@ -2,7 +2,8 @@ var app = new Vue({
     el: '#main',
     data:{
         messageAJAX:'',
-        varIdioma:true
+        varIdioma:true,
+        show:true
     },
     mounted(){
         let url="datos.JSON";

@@ -97,6 +97,21 @@ body{
     transition:.4s ease-out;
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+/*Transicion*/
+.bounce-enter-active {
+    animation: bounce-in 2s;
+  }
+@keyframes bounce-in {
+    0% {
+      opacity:0;
+      transform:translateY(-100px);
+    }
+    100% {
+      opacity:1;
+      transform:translateY(0);
+    }
+}
+/***********/
 .banderas img{
     width:30px;
 }
@@ -106,6 +121,9 @@ h2{
     padding:10px;
     border-radius:5px;
     color:var(--main-color);
+}
+#datosPersonales{
+    margin-top:3%;
 }
 #datosPersonales .descripcion{
     font-family: 'Charm', cursive;
@@ -263,7 +281,9 @@ h2{
     h2{
         margin-top:2.5rem;
     }
-
+    #datosPersonales{
+        margin-top:0;
+    }
 }
 
 /*xl - extra large*/
