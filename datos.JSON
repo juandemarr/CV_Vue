@@ -128,9 +128,9 @@
                     "tecnologias":"Tecnologías empleadas: Javascript (uso del DOM, objetos, localSotrage y AJAX), HTML5, CSS3 ",
                     "urlrepo":"https://github.com/juandemarr/stickyNotes",
                     "urlweb":"https://juandemarr.github.io/stickyNotes/",
-                    "img1":"/img/sticky1.png",
-                    "img2":"/img/sticky2.png",
-                    "imgsrc":"/img/stickyNotes.png"
+                    "img1":"img/sticky1.png",
+                    "img2":"img/sticky2.png",
+                    "imgsrc":"img/stickyNotes.png"
                 },
                 {
                     "nombre":"Landing Page StarwarsShop",
@@ -140,9 +140,9 @@
                     "tecnologias":"Tecnologías empleadas: HTML5 (uso de flexbox y grid), CSS3, Javascript (uso de JQUERY, animaciones y AJAX)",
                     "urlrepo":"https://github.com/juandemarr/landingPage",
                     "urlweb":"https://juandemarr.github.io/landingPage/",
-                    "img1":"/img/landing1.png",
-                    "img2":"/img/landing2.png",
-                    "imgsrc":"/img/landing.png"
+                    "img1":"img/landing1.png",
+                    "img2":"img/landing2.png",
+                    "imgsrc":"img/landing.png"
                 }
             ]
         }
@@ -276,9 +276,9 @@
                     "tecnologias":"Technologies used: Javascript (use of DOM, objects, localSotrage and AJAX), HTML5, CSS3",
                     "urlrepo":"https://github.com/juandemarr/stickyNotes",
                     "urlweb":"https://juandemarr.github.io/stickyNotes/",
-                    "img1":"/img/sticky1.png",
-                    "img2":"/img/sticky2.png",
-                    "imgsrc":"/img/stickyNotes.png"
+                    "img1":"img/sticky1.png",
+                    "img2":"img/sticky2.png",
+                    "imgsrc":"img/stickyNotes.png"
                 },
                 {
                     "nombre":"Landing Page StarwarsShop",
@@ -288,9 +288,9 @@
                     "tecnologias":"Technologies used: HTML5 (use of flexbox and grid), CSS3, Javascript (use of JQUERY, animations and AJAX)",
                     "urlrepo":"https://github.com/juandemarr/landingPage",
                     "urlweb":"https://juandemarr.github.io/landingPage/",
-                    "img1":"/img/landing1.png",
-                    "img2":"/img/landing2.png",
-                    "imgsrc":"/img/landing.png"
+                    "img1":"img/landing1.png",
+                    "img2":"img/landing2.png",
+                    "imgsrc":"img/landing.png"
                 }
             ]
         }
